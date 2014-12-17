@@ -8,10 +8,11 @@ import shutil
 Tk().withdraw()
 
 zip_file = askopenfilename(
-    initialdir="/", title='Please select a zip file')
+    initialdir="/home/grigori/Dropbox", title='Please select a zip file')
 targ_dir = askdirectory(
-    initialdir="/", title='Please select a directory')
+    initialdir="/home/grigori/Dropbox", title='Please select a directory')
 
+print(targ_dir)
 
 dir_name = targ_dir + os.sep + zip_file.split(os.sep)[-1].split("_")[0]
 print(dir_name)
