@@ -22,7 +22,7 @@ os.mkdir(dir_name)
 fh = open(zip_file, 'rb')
 z = zipfile.ZipFile(fh)
 for name in z.namelist():
-    doc_name = name.split("/")[-1].split(" ")[1] + ".docx"
+    doc_name = name.split("/")[-1].split("-")[1] + ".docx"
     source = z.open(name)
     target = file(os.path.join(dir_name, doc_name), "wb")
     with source, target:
