@@ -13,7 +13,6 @@ targ_dir = askdirectory(
     initialdir="/home/grigori/Dropbox", title='Please select a directory')
 
 dir_name = targ_dir + "/" + zip_file.split("/")[-1].split("_")[0]
-
 os.mkdir(dir_name)
 
 
